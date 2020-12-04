@@ -1,6 +1,6 @@
 pipeline {
     libraries {
-        lib 'gourav-shared@master'
+        lib 'shared-libraries@master'
     }
     agent any
     stages {
