@@ -1,13 +1,12 @@
+@Library('shared-library') _
+
 pipeline {
-    libraries {
-        lib 'shared-libraries@master'
-    }
     agent any
     stages {
         stage("") {
             steps {
                 script {
-                    printNode 'Gourav'
+                    printMessage.printNode 'Gourav'
                 }
             }
             post {
