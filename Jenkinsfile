@@ -6,7 +6,7 @@ pipeline {
         stage("") {
             steps {
                 script {
-                    print.printNode 'Gourav'
+                    printMessage.printNode 'Gourav'
                 }
             }
             post {
