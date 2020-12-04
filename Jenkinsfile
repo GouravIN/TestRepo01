@@ -1,6 +1,7 @@
-@Library('gourav-shared@master') _
-
 pipeline {
+    libraries {
+        lib 'gourav-shared@master'
+    }
     agent any
     stages {
         stage("") {
