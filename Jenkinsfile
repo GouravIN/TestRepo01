@@ -1,4 +1,4 @@
-@Library('gourav-shared') _
+@Library('gourav-shared@dev/pipelinedef') _
 
 pipeline {
     agent any
