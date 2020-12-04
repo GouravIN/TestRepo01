@@ -7,6 +7,7 @@ pipeline {
             steps {
                 script {
                     printMessage 'Gourav'
+                    command 'sleep 60', label "i'm sleeping for one minute"
                 }
             }
             post {
