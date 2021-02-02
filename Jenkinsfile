@@ -1,5 +1,7 @@
 @Library('shared-library@master') _
 
+def z = new org.foo.Consul()
+
 pipeline {
     agent any
     stages {
@@ -8,6 +10,7 @@ pipeline {
                 script {
                     printMessage 'Gourav'
                     command 'sleep 60'
+                    z.insleep(10)
                 }
             }
             post {
