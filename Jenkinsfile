@@ -9,14 +9,7 @@ pipeline {
     stages {
         stage("Test") {
             steps {
-                script {
-                    if(params.DEBUG_BUILD == true){
-                        echo "Its a Debug build"
-                    } else {
-                        echo "Its not a debug build"
-                    }
-                     command label:"Running Script", script: "sleep 10"
-                }
+                command label:"Running shell", script: "sleep 10"
             }
             post {
                 always {
