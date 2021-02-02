@@ -1,4 +1,4 @@
-@Library('shared-library@master') _
+
 
 pipeline {
     agent any
@@ -10,8 +10,6 @@ pipeline {
         stage("Test") {
             steps {
                 script {
-                    printMessage 'Gourav'
-                    command 'sleep 60'
                     if(DEBUG_BUILD){
                         echo "Its a Debug build"
                     } else {
