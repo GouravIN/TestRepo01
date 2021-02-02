@@ -9,7 +9,9 @@ pipeline {
     stages {
         stage("Test") {
             steps {
-                command script: "sleep 10",label: "Running sleep command"
+                script {
+                    command label: 'running sleep', 'sleep 10'
+                }
             }
             post {
                 always {
