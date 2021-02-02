@@ -7,11 +7,16 @@ pipeline {
         booleanParam(name: 'DEBUG_BUILD', defaultValue: false, description: '')
     }
     stages {
-        stage("") {
+        stage("Test") {
             steps {
                 script {
                     printMessage 'Gourav'
                     command 'sleep 60'
+                    if(DEBUG_BUILD){
+                        echo "Its a Debug build"
+                    } else {
+                        echo "Its not a debug build"
+                    }
                 }
             }
             post {
