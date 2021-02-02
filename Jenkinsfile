@@ -10,7 +10,7 @@ pipeline {
         stage("Test") {
             steps {
                 script {
-                    if(DEBUG_BUILD){
+                    if(DEBUG_BUILD == true){
                         echo "Its a Debug build"
                     } else {
                         echo "Its not a debug build"
