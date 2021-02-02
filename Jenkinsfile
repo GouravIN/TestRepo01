@@ -1,16 +1,17 @@
 @Library('shared-library@master') _
 
-def z = new org.foo.Consul()
-
 pipeline {
     agent any
+    parameters {
+        choice(name: 'CHOICES', choices: ['one', 'two', 'three'], description: '')
+        booleanParam(name: 'DEBUG_BUILD', defaultValue: false, description: '')
+    }
     stages {
         stage("") {
             steps {
                 script {
                     printMessage 'Gourav'
                     command 'sleep 60'
-                    z.insleep(10)
                 }
             }
             post {
