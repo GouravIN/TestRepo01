@@ -1,4 +1,4 @@
-
+@Library('gourav-shared') _
 
 pipeline {
     agent any
@@ -15,6 +15,7 @@ pipeline {
                     } else {
                         echo "Its not a debug build"
                     }
+                     command label:"Running Script", script: "sleep 10"
                 }
             }
             post {
